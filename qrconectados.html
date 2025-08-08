@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <title>Inscripción - Conectados por Mendoza Futura</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 50;
+            margin: 30px auto;
+            padding: 20px;
+            background-color: #fafafa;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        h1 {
+            color: #333;
+        }
+        img.logo {
+            max-width: 500px;
+            height: auto;
+            margin-bottom: 20px;
+        }
+        .qr-container {
+            margin: 20px 0;
+            display: flex;
+            max-width: 500px;
+            height: auto;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+        }
+        .qr-container img {
+            width: 50px;
+            height: auto;
+            animation: rotate 6s linear infinite;
+        }
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        .instrucciones {
+            font-size: 1rem;
+            color: #444;
+            margin-top: 10px;
+        }
+        .instrucciones img.qr {
+            width: 150px;
+            height: auto;
+            margin-top: 10px;
+            border-radius: 8px;
+        }
+        a.instagram-btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #E1306C;
+            color: white;
+            font-weight: bold;
+            border-radius: 6px;
+            text-decoration: none;
+            font-family: Arial, sans-serif;
+            transition: background-color 0.3s ease;
+        }
+        a.instagram-btn:hover {
+            background-color: #c1275d;
+        }
+        button {
+            font-size: 1rem;
+            padding: 12px 20px;
+            border-radius: 6px;
+            background-color: #4caf50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            margin-top: 15px;
+            animation: pulse 2s infinite;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Logo de Conectados: Usa formato PNG y ruta relativa -->
+     <img class="logo" src="C:\Users\USUARIO\OneDrive\Escritorio\RECETA\Copia de Ciudad.png" alt="Logo Conectados por Mendoza Futura Malargüe" />
+
+
+    <h1>Inscripción a Conectados por Mendoza Futura</h1>
+    <p class="instrucciones">
+        Escanea el código QR con tu celular para completar la inscripción rápida y fácil.
+        <br />
+        <!-- Código QR convertido a PNG y ubicado en carpeta 'imagenes' -->
+        <img class="qr" src="C:\Users\USUARIO\OneDrive\Escritorio\RECETA\qr.png.png" alt="Código QR Inscripción" />
+
+    <div class="qr-container">
+        <!-- Botón para Instagram -->
+        <a 
+           href="https://www.instagram.com/mendozafutura.comunidad?utm_source=ig_web_button_share_sheet&igsh=MXJtbGd6b21vaG1mdQ==" 
+           target="_blank" rel="noopener noreferrer"
+           class="instagram-btn">
+            Visita nuestro Instagram
+        </a>
+
+        <!-- Logo Instagram decorativo animado -->
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/240px-Instagram_icon.png" alt="Instagram" />
+    </div><p class="instrucciones">
+     </p> <button id="inscripcionBtn">Ir a la inscripción</button>
+
+    <!-- Audio para el clic del botón -->
+    <audio id="clickSound" src="https://www.soundjay.com/buttons/sounds/button-16.mp3" preload="auto"></audio>
+
+    <script>
+        const btn = document.getElementById('inscripcionBtn');
+        const audio = document.getElementById('clickSound');
+
+        btn.addEventListener('click', () => {
+            audio.currentTime = 0;
+            audio.play();
+            window.open('https://docs.google.com/forms/d/e/1FAIpQLSe94dEy2j8OMACfUehH1FN22w71asSZKWOM_iLSvqarMW_YPg/viewform', '_blank');
+        });
+    </script>
+
+</body>
+</html>
